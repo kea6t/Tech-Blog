@@ -1,4 +1,4 @@
-<section>
+{{!-- <section>
   <h2>Create New Post</h2>
 
   <form class="new-post-form">
@@ -7,12 +7,37 @@
       <input type="text" id="post-title" name="post-title" />
     </div>
     <div>
-      <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" />
+      <label for="post-message">Link</label>
+      <input id="post-message" name="post-message" />
     </div>
     <button type="submit" class="btn">Create</button>
   </form>
-</section>
+</section> --}}
+
+<div class="card">
+  <div class="field">
+    <form class="new-post-form">
+    <label for="post-title" class="label">Title</label>
+    <div class="control">
+      <input class="input" type="text" id="post-title" name="post-title" placeholder="Text input">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="post-message">Message</label>
+    <div class="control">
+      <textarea class="textarea" id="post-message" name="post-message" placeholder="Textarea"></textarea>
+    </div>
+  </div>
+
+  <div class="field is-grouped">
+    <div class="control">
+      <button id="create-post" type="submit" class="btn">Create</button>
+    </div>
+    </form>
+  </div>
+</div>
+
 
 {{#if posts.length}}
 <section>
@@ -28,4 +53,4 @@
 </section>
 {{/if}}
 
-<script src="/javascript/add-post.js"></script>
+<script src="/js/add-post.js"></script>

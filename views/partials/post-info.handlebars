@@ -1,11 +1,36 @@
-<article class="post">
+{{!-- <article class="post">
   <div class="title">
-    <a href="{{post_url}}" target="_blank">{{title}}</a>
-    <span>({{format_url post_url}})</span>
+    <a href="{{post_message}}" target="_blank">{{title}}</a>
+    <span>({{format_plural post_message}})</span>
   </div>
   <div class="meta">
     {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
     |
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
   </div>
-</article>
+</article> --}}
+
+<div class="card">
+  <header class="card-header">
+    <p class="card-header-title">
+      {{ title }}
+    </p>
+  </header>
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+
+      </div>
+      <div class="media-content">
+        <p class="title is-4">{{user.name}}</p>
+        <p class="subtitle is-6">@{{user.name}}</p>
+      </div>
+    </div>
+    <div class="content">
+      ({{format_plural post_message}})
+      <br>
+      {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
+      <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    </div>
+  </div>
+</div>
