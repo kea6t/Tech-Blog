@@ -1,4 +1,4 @@
-<div class="comments">
+{{!-- <div class="comments">
   {{#each this}}
   <section class="comment">
     <div class="meta">
@@ -9,4 +9,18 @@
     </div>
   </section>
   {{/each}}
-</div>
+</div> --}}
+
+{{#each this}}
+<article class="media">
+  <div class="media-content">
+    <div class="content">
+      <p>
+        <strong>{{user.username}}</strong> <small>@ {{format_date created_at}}</small>
+        <br>
+        {{comment_text}}
+      </p>
+    </div>
+  </div>
+</article>
+{{/each}}

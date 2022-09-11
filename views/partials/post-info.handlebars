@@ -19,15 +19,14 @@
   <div class="card-content">
     <div class="media">
       <div class="media-left">
-
       </div>
-      <div class="media-content">
+      {{!-- <div class="media-content">
         <p class="title is-4">{{user.name}}</p>
-        <p class="subtitle is-6">@{{user.name}}</p>
-      </div>
+        <p class="subtitle is-6"> @ {{user.name}}</p>
+      </div> --}}
     </div>
     <div class="content">
-      ({{format_plural post_message}})
+      {{format_plural post_message}}
       <br>
       {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
       <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>

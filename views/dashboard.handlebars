@@ -1,45 +1,29 @@
-{{!-- <section>
-  <h2>Create New Post</h2>
-
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="post-message">Link</label>
-      <input id="post-message" name="post-message" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section> --}}
-
 <div class="card">
-  <div class="field">
+  <section>
+    <h2>Create New Post</h2>
+
     <form class="new-post-form">
-    <label for="post-title" class="label">Title</label>
-    <div class="control">
-      <input class="input" type="text" id="post-title" name="post-title" placeholder="Text input">
-    </div>
-  </div>
-
-  <div class="field">
-    <label class="label" for="post-message">Message</label>
-    <div class="control">
-      <textarea class="textarea" id="post-message" name="post-message" placeholder="Textarea"></textarea>
-    </div>
-  </div>
-
-  <div class="field is-grouped">
-    <div class="control">
-      <button id="create-post" type="submit" class="btn">Create</button>
-    </div>
+      <div class="field">
+        <label class="label" for="post-title">Title</label>
+        <div class="control">
+          <input type="text" id="post-title" name="post-title" />
+        </div>
+      </div>
+      <div class="field">
+        <label class="label" for="post-message">Message</label>
+        <div class="control">
+          <textarea type="text" id="post-message" name="post-message"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn">Create</button>
     </form>
-  </div>
+  </section>
 </div>
 
 
+ 
 {{#if posts.length}}
+<div class="card">
 <section>
   <h2>Your Posts</h2>
   <ol>
@@ -51,6 +35,8 @@
     {{/each}}
   </ol>
 </section>
+</div>
 {{/if}}
+
 
 <script src="/js/add-post.js"></script>
